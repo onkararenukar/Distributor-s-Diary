@@ -31,15 +31,16 @@ public class distProfile extends AppCompatActivity
         tvEmail = (TextView) findViewById(R.id.txtEmail);
 
         final String distId= SaveSharedPreference.getUserName(getApplicationContext());
-
+        System.out.println("++++++DIST+++++++"+distId);
         dbRefDist=FirebaseDatabase.getInstance().getReference("Distributor").child(distId);
-
+        System.out.println("+++++++DIST++++++"+dbRefDist);
 
         dbRefDist.addValueEventListener(new ValueEventListener()
         {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot)
             {
+                System.out.println("++++++DIST+++++++"+dataSnapshot);
                 tvName.setText(dataSnapshot.child("distName").getValue().toString());
                 tvAddress.setText(dataSnapshot.child("distAddr").getValue().toString());
                 tvPincode.setText(dataSnapshot.child("distPincode").getValue().toString());
