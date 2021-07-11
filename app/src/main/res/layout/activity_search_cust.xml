@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.suyog.newapp.search_cust"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="#F1F4F5"
+    >
+
+    <EditText
+        android:layout_marginTop="60sp"
+        android:layout_width="300sp"
+        android:layout_height="35sp"
+        android:hint="Customer Name"
+        android:paddingLeft="15sp"
+        android:background="#FFFFFF"
+        android:textSize="15sp"
+        android:id="@+id/cname"
+        />
+
+    <EditText
+        android:layout_marginTop="15sp"
+        android:layout_width="300sp"
+        android:layout_height="35sp"
+        android:hint="Pincode"
+        android:maxLength="6"
+        android:inputType="number"
+        android:paddingLeft="15sp"
+        android:background="#FFFFFF"
+        android:textSize="15sp"
+        android:id="@+id/cpincode"
+        />
+
+
+    <EditText
+        android:layout_marginTop="15sp"
+        android:layout_width="300sp"
+        android:layout_height="35sp"
+        android:hint="Email Id"
+        android:inputType="textEmailAddress"
+        android:maxLength="50"
+        android:paddingLeft="15sp"
+        android:background="#FFFFFF"
+        android:textSize="15sp"
+        android:id="@+id/cemail"
+
+        />
+
+
+    <EditText
+        android:layout_marginTop="15sp"
+        android:layout_width="300sp"
+        android:layout_height="35sp"
+        android:hint="Mobile No."
+        android:inputType="phone"
+        android:maxLength="10"
+        android:paddingLeft="15sp"
+        android:background="#FFFFFF"
+        android:textSize="15sp"
+        android:id="@+id/cmobile"
+
+        />
+
+    <Button
+        android:layout_marginTop="30sp"
+        android:layout_width="300sp"
+        android:layout_height="35sp"
+        android:background="@drawable/button_border_orange"
+        android:text="Search Customers"
+        android:textColor="#FF7F27"
+        android:onClick="view_cust_list"
+        />
+
+    <TextView
+        android:gravity="center"
+        android:layout_width="300sp"
+        android:layout_height="60sp"
+        android:layout_marginTop="20sp"
+        android:textSize="13sp"
+        android:text="Note : Providing the above details will apply respective filters on the result, to view all the customers do not fill any field"
+        android:textColor="#000000"
+        />
+
+</LinearLayout>

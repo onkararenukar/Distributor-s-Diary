@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#F1F4F5">
+
+<LinearLayout
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context="com.example.suyog.newapp.floatingCustInfo">
+
+    <ImageView
+        android:layout_marginTop="10dp"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:background="@drawable/profile_icon"
+
+        android:padding="10dp"/>
+
+    <TextView
+
+        android:gravity="center"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:text="Customer Deatails"
+        android:textSize="15dp"
+        android:textColor="@android:color/black"
+
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal"
+        >
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="35dp"
+            android:background="#FFFFFF"
+            android:drawableLeft="@drawable/user_icon"
+            android:drawablePadding="15dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="12dp"
+            android:text="NAME"
+            android:textColor="@android:color/black"
+            android:textSize="13dp" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="200dp"
+            android:layout_height="35dp"
+            android:background="#FFFFFF"
+            android:gravity="center_vertical"
+            android:textColor="@android:color/black"
+            android:textSize="15dp"
+
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="10dp"
+            android:background="#FFFFFF"
+            android:drawableLeft="@drawable/address_icon"
+            android:drawablePadding="15dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="ADDRESS"
+            android:textColor="@android:color/black"
+            android:textSize="13dp" />
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="200dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="10dp"
+            android:background="#FFFFFF"
+            android:gravity="center_vertical"
+            android:textColor="@android:color/black"
+            android:textSize="15dp"
+
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        >
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="35dp"
+            android:background="#FFFFFF"
+            android:text="PINCODE"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:drawablePadding="15dp"
+            android:drawableLeft="@drawable/address_icon"
+            android:textSize="13dp"
+            android:textColor="@android:color/black"
+            />
+        <TextView
+            android:id="@+id/pincode"
+            android:layout_width="200dp"
+            android:layout_height="35dp"
+            android:background="#FFFFFF"
+            android:gravity="center_vertical"
+            android:textColor="@android:color/black"
+            android:textSize="15dp"
+
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        >
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="35dp"
+            android:background="#FFFFFF"
+            android:text="Email"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:drawablePadding="15dp"
+            android:drawableLeft="@drawable/email_icon"
+            android:textSize="13dp"
+            android:textColor="@android:color/black"
+            />
+
+        <TextView
+            android:id="@+id/email"
+            android:layout_width="200dp"
+            android:layout_height="35dp"
+            android:background="#FFFFFF"
+            android:gravity="center_vertical"
+            android:textColor="@android:color/black"
+            android:textSize="15dp"
+
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:layout_marginBottom="25sp"
+        >
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="35dp"
+            android:background="#FFFFFF"
+            android:drawableLeft="@drawable/phone_icon"
+            android:drawablePadding="15dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="MOBILE NO."
+            android:textColor="@android:color/black"
+            android:textSize="13dp" />
+
+        <TextView
+            android:id="@+id/contact"
+            android:layout_width="200dp"
+            android:layout_height="35dp"
+            android:background="#FFFFFF"
+            android:gravity="center_vertical"
+            android:textColor="@android:color/black"
+            android:textSize="15dp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="320sp"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/prolayout"
+        android:layout_marginBottom="50sp"
+        android:paddingBottom="20sp"
+        >
+
+     <TextView
+         android:layout_marginTop="10sp"
+         android:layout_width="320sp"
+         android:layout_height="30sp"
+         android:text="Daily Requirments"
+         android:textColor="#000000"
+         android:textSize="15sp"
+         android:gravity="center_horizontal"
+         />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            >
+        <TextView
+            android:layout_width="210sp"
+            android:layout_height="30sp"
+            android:text="Product Description"
+            android:textColor="#000000"
+            android:layout_marginTop="5sp"
+            android:paddingLeft="15sp"
+            />
+
+        <TextView
+            android:layout_width="100sp"
+            android:layout_height="30sp"
+            android:text="Quantity"
+            android:textColor="#000000"
+            android:layout_marginTop="5sp"
+            android:paddingLeft="5sp"
+            />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+</ScrollView>

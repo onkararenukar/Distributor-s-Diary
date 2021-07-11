@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="#F1F4F5"
+    tools:context="com.example.suyog.newapp.sendNotifDist">
+
+
+    <EditText
+        android:layout_marginTop="40sp"
+        android:layout_width="330sp"
+        android:layout_height="60sp"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:background="#FFFFFF"
+        android:paddingLeft="15sp"
+        android:paddingRight="15sp"
+        android:hint="Your Message Here"
+        android:id="@+id/newNotif"
+        android:textSize="12sp"
+        />
+
+    <Button
+        android:layout_marginTop="10sp"
+        android:layout_width="280sp"
+        android:layout_height="30sp"
+        android:background="#3F48CC"
+        android:textColor="#FFFFFF"
+        android:text="Send "
+        android:onClick="sendMesaage"
+
+        />
+
+    <TextView
+        android:layout_marginTop="20sp"
+        android:layout_width="300sp"
+        android:layout_height="30sp"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:text="Templates"
+        android:drawableRight="@drawable/drop_down_arrow"
+        android:paddingRight="15sp"
+        android:onClick="disp"
+        />
+
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/templateLL"
+        >
+
+    <TextView
+        android:layout_width="320sp"
+        android:layout_height="40sp"
+        android:background="@drawable/button_border"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:textSize="12sp"
+        android:text="Delivery of milk will not be possible tomorrow on "
+        android:id="@+id/template1"
+        android:onClick="load_template"
+        />
+
+    <TextView
+        android:layout_marginTop="10sp"
+        android:layout_width="320sp"
+        android:layout_height="40sp"
+        android:background="@drawable/button_border"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:textSize="12sp"
+        android:text="Price hike In the  product of company      by      Rs per litre, effective from date"
+        android:id="@+id/template2"
+        android:onClick="load_template"
+        />
+
+    <TextView
+        android:layout_width="320sp"
+        android:layout_height="40sp"
+        android:layout_marginTop="10sp"
+        android:background="@drawable/button_border"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:textSize="12sp"
+        android:text="New product        is added and available now for sale You can check and order it in products section"
+        android:id="@+id/template3"
+        android:onClick="load_template"
+        />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_marginTop="60sp"
+        android:layout_width="350sp"
+        android:layout_height="30sp"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:text="Previous Notification sent"
+        />
+
+    <TextView
+        android:layout_width="300sp"
+        android:layout_height="40sp"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:background="#FFFFFF"
+        android:paddingLeft="15sp"
+        android:id="@+id/prevMsg"
+        android:textSize="10sp"
+        />
+
+</LinearLayout>

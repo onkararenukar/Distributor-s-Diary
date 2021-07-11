@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    tools:context="com.example.suyog.newapp.Registration"
+    >
+
+    <ImageView
+        android:layout_width="170dp"
+        android:layout_height="200dp"
+        android:src="@drawable/img"
+        android:layout_marginTop="20dp"
+        />
+
+    <TextView
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:layout_width="100sp"
+        android:layout_height="30sp"
+        android:text="Register As"
+        android:textColor="@android:color/black"
+        />
+
+    <Button
+        android:layout_marginTop="20dp"
+        android:layout_width="220dp"
+        android:layout_height="40dp"
+        android:background="@drawable/button_border_blue"
+        android:text="Distributor"
+        android:textColor="#3F48CC"
+        android:onClick="to_dist_reg_form"
+        />
+
+    <Button
+        android:layout_marginTop="15dp"
+        android:layout_width="220dp"
+        android:layout_height="40dp"
+        android:background="@drawable/button_border_orange"
+        android:gravity="center"
+        android:text="Customer"
+        android:textColor="#FF7F27"
+        android:onClick="to_new_cust_form"
+        />
+
+    <TextView
+        android:layout_marginTop="30dp"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:text="Or"
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        />
+    <LinearLayout
+        android:layout_marginTop="15dp"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        >
+    <TextView
+        android:gravity="center"
+        android:layout_width="180sp"
+        android:layout_height="30sp"
+        android:text="Already have an Account? "
+        android:textColor="@android:color/black"
+        />
+
+    <TextView
+        android:gravity="center_vertical"
+        android:layout_width="40sp"
+        android:layout_height="30sp"
+        android:text="Login!"
+        android:textColor="#3F48CC"
+        android:onClick="nav"
+        />
+
+    </LinearLayout>
+
+</LinearLayout>

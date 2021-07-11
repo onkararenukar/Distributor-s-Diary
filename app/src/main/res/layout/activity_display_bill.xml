@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/l1"
+    android:background="#FFFFFF
+"
+    >
+
+<LinearLayout
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.example.suyog.newapp.displayBill"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:paddingBottom="15sp"
+    >
+
+    <TextView
+        android:layout_marginTop="10sp"
+        android:layout_width="290sp"
+        android:layout_height="30sp"
+        android:id="@+id/month"
+        android:textColor="#000000"
+        android:textSize="13sp"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:layout_width="290sp"
+        android:layout_height="30sp"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:id="@+id/custName"
+        android:text="Customer Name "
+        android:textSize="13sp"
+        />
+
+    <LinearLayout
+        android:layout_width="320sp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:id="@+id/llbill"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10sp"
+        >
+
+
+    <LinearLayout
+        android:layout_width="300sp"
+        android:layout_height="30sp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="60sp"
+            android:layout_height="30sp"
+            android:textSize="13sp"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:text="Date"
+            android:background="@drawable/button_border_thin"
+            />
+
+        <TextView
+            android:layout_width="150sp"
+            android:layout_height="30sp"
+            android:textSize="13sp"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:text="Quantity"
+            android:background="@drawable/button_border_thin"
+            />
+
+        <TextView
+            android:layout_width="80sp"
+            android:layout_height="30sp"
+            android:textSize="13sp"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:text="Daily Total"
+            android:background="@drawable/button_border_thin"
+            />
+
+    </LinearLayout>
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="280sp"
+        android:layout_height="30sp"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:layout_marginTop="10sp"
+        android:text="Total Bill Amount "
+        android:id="@+id/total"
+        />
+</LinearLayout>
+</ScrollView>

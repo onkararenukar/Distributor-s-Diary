@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1F4F5">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F1F4F5"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        tools:context="com.example.suyog.newapp.cust_reg">
+
+
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="70dp"
+            android:gravity="center"
+            android:text="Please proivde following details"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+
+            />
+
+        <EditText
+            android:id="@+id/cname"
+            android:layout_width="300dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="20dp"
+            android:background="#FFFFFF"
+            android:drawableLeft="@drawable/user_icon"
+            android:drawablePadding="15dp"
+            android:gravity="center_vertical"
+            android:hint="NAME"
+            android:inputType="textPersonName"
+            android:maxLength="40"
+            android:paddingLeft="12dp"
+            android:textSize="13sp"
+
+            />
+
+
+        <EditText
+            android:id="@+id/caddress"
+            android:layout_width="300dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="7dp"
+            android:background="#FFFFFF"
+            android:drawableLeft="@drawable/address_icon"
+            android:drawablePadding="15dp"
+            android:gravity="center_vertical"
+            android:hint="ADDRESS"
+            android:inputType="textMultiLine"
+            android:maxLength="100"
+            android:paddingLeft="10dp"
+            android:textSize="13dp" />
+
+
+        <EditText
+            android:id="@+id/cpincode"
+            android:layout_width="300dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="7dp"
+            android:background="#FFFFFF"
+            android:drawableLeft="@drawable/address_icon"
+            android:drawablePadding="15dp"
+            android:gravity="center_vertical"
+            android:hint="Pincode"
+            android:inputType="number"
+            android:maxLength="6"
+            android:paddingLeft="10dp"
+            android:paddingRight="15dp"
+            android:textSize="13dp" />
+
+
+        <EditText
+            android:id="@+id/cemail"
+            android:layout_width="300dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="7dp"
+            android:background="#FFFFFF"
+            android:drawableLeft="@drawable/email_icon"
+            android:drawablePadding="15dp"
+            android:gravity="center_vertical"
+            android:hint="EMAIL"
+            android:inputType="textEmailAddress"
+            android:paddingLeft="10dp"
+            android:textSize="13dp" />
+
+
+        <EditText
+            android:id="@+id/cmobile"
+            android:layout_width="300dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="7dp"
+            android:background="#FFFFFF"
+            android:drawableLeft="@drawable/phone_icon"
+            android:drawablePadding="15dp"
+            android:gravity="center_vertical"
+            android:hint="Mobile No."
+            android:inputType="phone"
+            android:paddingLeft="10dp"
+            android:textSize="13sp"
+            android:maxLength="10"
+            />
+
+
+        <EditText
+            android:id="@+id/cpassword"
+            android:layout_width="300dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="7dp"
+            android:background="#FFFFFF"
+            android:drawableLeft="@drawable/password_icon"
+            android:drawablePadding="15dp"
+            android:gravity="center_vertical"
+            android:hint="PASSWORD"
+            android:inputType="textPassword"
+            android:paddingLeft="10dp"
+            android:paddingRight="15dp"
+            android:textSize="13dp" />
+
+
+        <EditText
+            android:id="@+id/cconfpwd"
+            android:layout_width="300dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="7dp"
+            android:background="#FFFFFF"
+            android:drawableLeft="@drawable/password_icon"
+            android:drawablePadding="15dp"
+            android:gravity="center_vertical"
+            android:hint="CONFIRM PASSWORD"
+            android:inputType="textPassword"
+            android:paddingLeft="10dp"
+            android:textSize="13dp"
+
+            />
+
+
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="35dp"
+            android:background="#E3714D"
+            android:focusable="true"
+            android:onClick="to_search_dist"
+            android:text="Find Distributors"
+            android:textColor="@android:color/white"
+            android:textSize="17dp" />
+
+
+        <!--
+    <TextView
+        android:gravity="center"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="30dp"
+        android:text="Distributor's in Your Area"
+        />
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="300dp"
+        android:layout_height="500dp"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:gravity="center"
+                android:background="#FFFFFF"
+                android:layout_width="250dp"
+                android:layout_height="30dp"
+                android:text="Distributor 1"
+                />
+
+
+            <ImageView
+                android:paddingLeft="10dp"
+                android:layout_width="30dp"
+                android:layout_height="25dp"
+                android:src="@drawable/sendreq_icon"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:gravity="center"
+                android:background="#FFFFFF"
+                android:layout_width="250dp"
+                android:layout_height="30dp"
+                android:text="Distributor 2"
+                />
+
+
+            <ImageView
+                android:paddingLeft="10dp"
+                android:layout_width="30dp"
+                android:layout_height="25dp"
+                android:src="@drawable/sendreq_icon"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="30dp"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:text="Distributor 3" />
+
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:src="@drawable/sendreq_icon" />
+        </LinearLayout>
+
+
+    </LinearLayout> -->
+    </LinearLayout>
+</ScrollView>

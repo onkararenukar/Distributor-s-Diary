@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    tools:context="com.example.suyog.newapp.view_requests">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/mainLayout"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:visibility="gone"
+    >
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:text="Customer Requests"
+                android:textSize="17sp"
+                android:textColor="#000000"
+                android:gravity="center"
+                />
+
+            <LinearLayout
+                android:background="@drawable/button_border"
+                android:layout_marginTop="10dp"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                >
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="38dp"
+                    android:gravity="center"
+                    android:text="Prev"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:onClick="prev"
+                    />
+
+
+                <TextView
+                    android:id="@+id/counter"
+                    android:layout_width="190dp"
+                    android:layout_height="38dp"
+                    android:gravity="center"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+
+                    />
+
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="38dp"
+                    android:gravity="center"
+                    android:text="Next"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:onClick="next"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_border"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:paddingBottom="20dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    >
+
+                    <TextView
+                        android:paddingLeft="10dp"
+                        android:layout_width="120dp"
+                        android:layout_height="35dp"
+                        android:text="Name"
+                        android:gravity="center_vertical"
+                        android:textColor="#000000"
+                        />
+
+                    <TextView
+                        android:paddingLeft="5dp"
+                        android:id="@+id/name"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:textColor="#000000"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="2dp"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    >
+
+                    <TextView
+                        android:paddingLeft="10dp"
+                        android:layout_width="120dp"
+                        android:layout_height="35dp"
+                        android:text="Address"
+                        android:gravity="center_vertical"
+                        android:textColor="#000000"
+                        />
+
+                    <TextView
+                        android:paddingLeft="5dp"
+                        android:id="@+id/address"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:textColor="#000000"
+                        />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    >
+
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="35dp"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="Contact"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:paddingLeft="5dp"
+                        android:id="@+id/contact"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:textColor="#000000"
+                        />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_width="300dp"
+                    android:layout_height="35dp"
+                    android:gravity="center"
+                    android:textColor="#000000"
+                    android:text="Requirments"
+                    />
+
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/reqLL"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                >
+
+
+            </LinearLayout>
+
+
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="80dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            >
+            <Button
+                android:layout_marginRight="15dp"
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/button_border_green"
+                android:text="Accept"
+                android:textColor="@android:color/holo_green_light"
+                android:textSize="14sp"
+                android:layout_marginBottom="15dp"
+                android:textAllCaps="false"
+                android:onClick="accept_req"
+                />
+              <!--  android:onClick="sendreq" -->
+
+            <Button
+                android:textAllCaps="false"
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/button_border_red"
+                android:text="Reject"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="14sp"
+                android:layout_marginBottom="15dp"
+                android:onClick="reject_req"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+
+        android:layout_marginTop="40dp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:id="@+id/noresultll"
+        android:visibility="gone"
+        >
+
+        <TextView
+            android:id="@+id/nodistfound"
+            android:layout_width="295dp"
+            android:layout_height="35dp"
+            android:textColor="#000000"
+            android:text="No Pending Requests"
+            android:gravity="center"
+            android:textSize="15sp"
+
+            />
+
+        <Button
+            android:layout_marginTop="15dp"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:background="@drawable/button_border"
+            android:textColor="@android:color/black"
+            android:text="Ok"
+            android:onClick="to_dist_home"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>
+

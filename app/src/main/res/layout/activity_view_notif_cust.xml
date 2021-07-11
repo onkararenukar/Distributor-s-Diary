@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.suyog.newapp.viewNotifCust"
+    android:gravity="center_horizontal"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:layout_marginTop="20sp"
+        android:layout_width="280sp"
+        android:layout_height="30sp"
+        android:gravity="center"
+        android:textColor="#000000"
+        android:text="Notification from Customer"
+        android:textSize="12sp"
+        />
+
+    <TextView
+        android:paddingTop="10sp"
+        android:paddingBottom="15sp"
+        android:layout_marginTop="5sp"
+        android:layout_marginRight="15sp"
+        android:layout_marginLeft="15sp"
+        android:layout_marginBottom="50sp"
+        android:layout_width="280sp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="#000000"
+        android:background="@drawable/button_border"
+        android:id="@+id/textv"
+
+        />
+</LinearLayout>

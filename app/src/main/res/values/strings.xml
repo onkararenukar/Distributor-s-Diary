@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Distributor\'s Diary</string>
+    <string name="title_activity_search_custs">search_custs</string>
+
+    <string-array name="months">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+
+    <string name="abc">Hello</string>
+</resources>

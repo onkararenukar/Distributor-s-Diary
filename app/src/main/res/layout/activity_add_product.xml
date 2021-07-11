@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="#F1F4F5"
+    tools:context="com.example.suyog.newapp.addProduct">
+
+    <TextView
+        android:layout_marginTop="15dp"
+        android:layout_width="300dp"
+        android:layout_height="25dp"
+        android:text="Product Details"
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        />
+
+
+
+    <EditText
+        android:id="@+id/delCharges"
+        android:layout_marginTop="7dp"
+        android:maxLength="2"
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:hint="Delivery Charges"
+        android:paddingLeft="20dp"
+        android:textSize="15sp"
+        android:inputType="number"
+        android:background="#FFFFFF"
+        />
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="300dp"
+        android:layout_height="250dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="#FFFFFF"
+        >
+
+        <TextView
+            android:layout_width="280dp"
+            android:layout_height="35dp"
+            android:text="Product Name :  Milk"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+
+            />
+
+        <EditText
+            android:id="@+id/companyName"
+            android:maxLength="50"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:hint="Company Name"
+            android:paddingLeft="20dp"
+            android:textSize="15sp"
+            />
+
+        <EditText
+            android:id="@+id/price"
+            android:maxLength="3"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:hint="Max. Retail Price (MRP)/ per ltr."
+            android:paddingLeft="20dp"
+            android:textSize="15sp"
+            android:inputType="number"
+            />
+
+        <EditText
+            android:id="@+id/description"
+            android:maxLength="40"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:hint="Product Description"
+            android:paddingLeft="20dp"
+            android:textSize="15sp"
+            />
+
+
+        <Button
+            android:layout_marginTop="15dp"
+            android:layout_width="250dp"
+            android:layout_height="32dp"
+            android:background="#3F48CC"
+            android:text="Add Another Product"
+            android:textColor="@android:color/white"
+            android:textSize="15sp"
+            android:onClick="add_milk"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="300dp"
+        android:layout_height="35dp"
+        android:text="Othrer Products"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:textSize="15dp"
+        android:textColor="@android:color/black"
+
+        />
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:background="#FFFFFF"
+        android:layout_marginTop="7dp"
+        >
+
+
+        <CheckBox
+            android:id="@+id/butter"
+            android:layout_width="120dp"
+            android:layout_height="35dp"
+            android:text="Butter"
+            android:layout_marginRight="10dp"
+            />
+
+        <CheckBox
+            android:id="@+id/cream"
+            android:layout_width="120dp"
+            android:layout_height="35dp"
+            android:text="Cream"
+            android:layout_marginRight="10dp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="8dp"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:background="#FFFFFF"
+        >
+
+        <CheckBox
+            android:id="@+id/ghee"
+            android:layout_width="120dp"
+            android:layout_height="35dp"
+            android:text="Ghee"
+            android:layout_marginRight="10dp"
+            />
+
+        <CheckBox
+            android:id="@+id/cheese"
+            android:layout_width="120dp"
+            android:layout_height="35dp"
+            android:text="Cheese"
+            android:layout_marginRight="10dp"
+            />
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/moreProdcts"
+        android:layout_marginTop="7dp"
+        android:layout_width="300dp"
+        android:layout_height="35dp"
+        android:textColor="@android:color/black"
+        android:hint="Write Your own"
+        android:background="#FFFFFF"
+        android:paddingLeft="15dp"
+        android:inputType="textPersonName"
+        android:textSize="13sp"
+
+        />
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="25dp"
+        android:background="#E3714D"
+        android:text="Submit"
+        android:textColor="@android:color/white"
+        android:textSize="17dp"
+        android:focusable="true"
+        android:onClick="complete_reg"
+        />
+
+</LinearLayout>
