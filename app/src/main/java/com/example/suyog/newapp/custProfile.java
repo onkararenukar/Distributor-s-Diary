@@ -30,13 +30,13 @@ public class custProfile extends AppCompatActivity{
             tvPincode = (TextView) findViewById(R.id.txtPincode);
             tvMobile = (TextView) findViewById(R.id.txtMobile);
             tvEmail = (TextView) findViewById(R.id.txtEmail);
-            String custId= getIntent().getStringExtra("custId");
-            final String distId= SaveSharedPreference.getUserName(getApplicationContext());
+            String distId= SaveSharedPreference.getFkOfDist(getApplicationContext());
+
+            final String custId= SaveSharedPreference.getUserName(getApplicationContext());
             DatabaseReference   dbRefDist= FirebaseDatabase.getInstance().getReference();
-            dbRefDist.child("Customer").child("-Mc4w1IpDP8WGMikzvBD").child("-Mc4wgexm9Va40QnrvmC").addValueEventListener(new ValueEventListener() {
+            dbRefDist.child("Customer").child(distId).child(custId).addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(DataSnapshot snapshot) {
-                    System.out.println("$$$$$$$$$$$$$$$$$$"+snapshot.getValue());  //prints "Do you have data? You'll love Firebase."
                     String address,name,email,contact,pincode;
 
                     name=snapshot.child("custName").getValue().toString();
@@ -55,8 +55,6 @@ public class custProfile extends AppCompatActivity{
                 public void onCancelled(DatabaseError databaseError) {
                 }
             });
-
-
 
         }
 
