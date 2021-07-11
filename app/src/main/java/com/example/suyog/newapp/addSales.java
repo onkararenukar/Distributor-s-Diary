@@ -31,7 +31,7 @@ public class addSales extends AppCompatActivity {
     int procount;
     float cost,total=0;
     String custId,custName,distId,date;
-    TextView lblqty,tvDate,tvName;
+    TextView lblqty,tvDate,tvName,lblSeekbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) 
     {
@@ -175,6 +175,9 @@ public class addSales extends AppCompatActivity {
                         lblqty.setText(" Quantity : 0ml");
 
                         linLayout3.addView(lblqty,240,50);
+                        LinearLayout linLayout4=new LinearLayout(prolayout.getContext());
+                        linLayout4.setGravity(Gravity.CENTER);
+                        prolayout.addView(linLayout4,580,50);
 
                         final SeekBar sbqty=new SeekBar(prolayout.getContext());
                         sbqty.setId(13*procount);
@@ -187,8 +190,15 @@ public class addSales extends AppCompatActivity {
                             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
                                 int myid=seekBar.getId();
                                 myid/=13;
-                                TextView lblqty= (TextView) findViewById(myid*17);
-                                lblqty.setText(" Quantity : "+(500*seekBar.getProgress())+"ml");
+                                linLayout4.removeAllViews();
+                                lblSeekbar=new TextView(llProducts.getContext());
+                                lblSeekbar.setId(myid*17);
+                                lblSeekbar.setGravity(Gravity.RIGHT);
+                                lblSeekbar.setTextColor(Color.RED);
+                                lblSeekbar.setText((500*seekBar.getProgress())+"ml");
+                                linLayout4.addView(lblSeekbar,240,50);
+//                                TextView lblqty= (TextView) findViewById(myid*17);
+//                                lblqty.setText(" Quantity : "+(500*seekBar.getProgress())+"ml");
                             }
 
                             @Override

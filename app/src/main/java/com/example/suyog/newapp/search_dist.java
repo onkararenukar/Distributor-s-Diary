@@ -23,7 +23,7 @@ public class search_dist extends AppCompatActivity {
     int distCount=0,i=0,procount=0;
     float cost,total;
     Distributor[] dist=new Distributor[100];
-    TextView etCounter,etName,etAddr,etContact,etDelCharges,etOtherPros,lblqty;
+    TextView etCounter,etName,etAddr,etContact,etDelCharges,etOtherPros,lblqty,lblSeekbar;
     LinearLayout llProducts,mainll,noresultll;
 
     String proId[]=new String[10];
@@ -38,9 +38,7 @@ public class search_dist extends AppCompatActivity {
 
         pincode = getIntent().getStringExtra("pincode");
         custId = getIntent().getStringExtra("id");
-System.out.println(
-        "=====dist search====="+custId
-);
+
         distref= FirebaseDatabase.getInstance().getReference("Distributor");
 
         etCounter=(TextView) findViewById(R.id.counter);
@@ -243,6 +241,9 @@ System.out.println(
                             lblqty.setText(" Quantity : 0ml");
 
                             linLayout5.addView(lblqty,240,50);
+                            LinearLayout linLayout6=new LinearLayout(prolayout.getContext());
+                            linLayout6.setGravity(Gravity.CENTER);
+                            prolayout.addView(linLayout6,580,50);
 
                             final SeekBar sbqty=new SeekBar(prolayout.getContext());
                             sbqty.setId(13*procount);
@@ -253,8 +254,15 @@ System.out.println(
                                 public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
                                     int myid=seekBar.getId();
                                     myid/=13;
-                                    TextView lblqty= (TextView) findViewById(myid*17);
-                                    lblqty.setText(" Quantity : "+(500*seekBar.getProgress())+"ml");
+                                    linLayout6.removeAllViews();
+                                    lblSeekbar=new TextView(llProducts.getContext());
+                                    lblSeekbar.setId(myid*17);
+                                    lblSeekbar.setGravity(Gravity.RIGHT);
+                                    lblSeekbar.setTextColor(Color.RED);
+                                    lblSeekbar.setText((500*seekBar.getProgress())+"ml");
+                                    linLayout6.addView(lblSeekbar,240,50);
+//                                    TextView lblqty= (TextView) findViewById(myid*17);
+//                                    lblqty.setText(" Quantity : "+(500*seekBar.getProgress())+"ml");
                                 }
 
                                 @Override
