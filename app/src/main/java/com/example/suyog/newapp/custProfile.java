@@ -11,6 +11,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 public class custProfile extends AppCompatActivity{
@@ -29,31 +30,34 @@ public class custProfile extends AppCompatActivity{
             tvPincode = (TextView) findViewById(R.id.txtPincode);
             tvMobile = (TextView) findViewById(R.id.txtMobile);
             tvEmail = (TextView) findViewById(R.id.txtEmail);
-
-            String custId= SaveSharedPreference.getUserName(getApplicationContext());
-
-            dbRefDist= FirebaseDatabase.getInstance().getReference("Customer").child(custId);
-
-
-            dbRefDist.addValueEventListener(new ValueEventListener()
-            {
+            String custId= getIntent().getStringExtra("custId");
+            final String distId= SaveSharedPreference.getUserName(getApplicationContext());
+            DatabaseReference   dbRefDist= FirebaseDatabase.getInstance().getReference();
+            dbRefDist.child("Customer").child("-Mc4w1IpDP8WGMikzvBD").child("-Mc4wgexm9Va40QnrvmC").addValueEventListener(new ValueEventListener() {
                 @Override
-                public void onDataChange(DataSnapshot dataSnapshot)
-                {
-                    tvName.setText(dataSnapshot.child("custName").getValue().toString());
-                    tvAddress.setText(dataSnapshot.child("custAddr").getValue().toString());
-                    tvPincode.setText(dataSnapshot.child("custPincode").getValue().toString());
-                    tvEmail.setText(dataSnapshot.child("custEmail").getValue().toString());
-                    tvMobile.setText(dataSnapshot.child("custContact").getValue().toString());
+                public void onDataChange(DataSnapshot snapshot) {
+                    System.out.println("$$$$$$$$$$$$$$$$$$"+snapshot.getValue());  //prints "Do you have data? You'll love Firebase."
+                    String address,name,email,contact,pincode;
 
+                    name=snapshot.child("custName").getValue().toString();
+                    address=snapshot.child("custAddr").getValue().toString();
+                    email=snapshot.child("custEmail").getValue().toString();
+                    contact=snapshot.child("custContact").getValue().toString();
+                    pincode=snapshot.child("custPincode").getValue().toString();
+
+                    tvName.setText(name);
+                    tvAddress.setText(address);
+                    tvMobile.setText(contact);
+                    tvEmail.setText(email);
+                    tvPincode.setText(pincode);
                 }
-
                 @Override
-                public void onCancelled(DatabaseError databaseError)
-                {
-
+                public void onCancelled(DatabaseError databaseError) {
                 }
             });
+
+
+
         }
 
         @Override
