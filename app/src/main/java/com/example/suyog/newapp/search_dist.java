@@ -38,7 +38,9 @@ public class search_dist extends AppCompatActivity {
 
         pincode = getIntent().getStringExtra("pincode");
         custId = getIntent().getStringExtra("id");
-
+System.out.println(
+        "=====dist search====="+custId
+);
         distref= FirebaseDatabase.getInstance().getReference("Distributor");
 
         etCounter=(TextView) findViewById(R.id.counter);
@@ -141,11 +143,11 @@ public class search_dist extends AppCompatActivity {
                             String description = obj.getDescription();
 
                             llProducts.addView(prolayout, 580, LinearLayout.LayoutParams.WRAP_CONTENT);
-                            prolayout.addView(linLayout1,580,35);
-                            prolayout.addView(linLayout2,580,35);
-                            prolayout.addView(linLayout3,580,35);
+                            prolayout.addView(linLayout1,580,50);
+                            prolayout.addView(linLayout2,580,50);
+                            prolayout.addView(linLayout3,580,50);
                             if (!description.isEmpty())
-                                prolayout.addView(linLayout4,580,35);
+                                prolayout.addView(linLayout4,580,50);
 
                             LinearLayout.LayoutParams layoutParams=(LinearLayout.LayoutParams) prolayout.getLayoutParams();
                             layoutParams.setMargins(0,0,0,60);
@@ -215,24 +217,24 @@ public class search_dist extends AppCompatActivity {
                             if (!description.isEmpty())
                                 descript.setText(obj.getDescription());
 
-                            linLayout1.addView(lblnm,250,35 );
-                            linLayout1.addView(name,320,35);
+                            linLayout1.addView(lblnm,250,50 );
+                            linLayout1.addView(name,320,50);
 
-                            linLayout2.addView(lblcname,250,35 );
-                            linLayout2.addView(cname,320,35);
+                            linLayout2.addView(lblcname,250,50 );
+                            linLayout2.addView(cname,320,50);
 
-                            linLayout3.addView(lblprice,250,35);
-                            linLayout3.addView(price,320,35);
+                            linLayout3.addView(lblprice,250,50);
+                            linLayout3.addView(price,320,50);
 
                             if (!description.isEmpty())
                             {
-                                linLayout4.addView(lbldescript,250,35);
-                                linLayout4.addView(descript,320,35);
+                                linLayout4.addView(lbldescript,250,50);
+                                linLayout4.addView(descript,320,50);
                             }
 
                             LinearLayout linLayout5=new LinearLayout(prolayout.getContext());
                             linLayout5.setGravity(Gravity.CENTER);
-                            prolayout.addView(linLayout5,580,35);
+                            prolayout.addView(linLayout5,580,50);
 
                             lblqty= new TextView(llProducts.getContext());
                             lblqty.setId(procount*17);
@@ -240,7 +242,7 @@ public class search_dist extends AppCompatActivity {
                             lblqty.setTextColor(Color.BLACK);
                             lblqty.setText(" Quantity : 0ml");
 
-                            linLayout5.addView(lblqty,240,35);
+                            linLayout5.addView(lblqty,240,50);
 
                             final SeekBar sbqty=new SeekBar(prolayout.getContext());
                             sbqty.setId(13*procount);
@@ -266,7 +268,7 @@ public class search_dist extends AppCompatActivity {
                                 }
                             });
 
-                            linLayout5.addView(sbqty,330,35);
+                            linLayout5.addView(sbqty,330,50);
                         }
                     }
                 }

@@ -107,9 +107,9 @@ public class addSales extends AppCompatActivity {
                         String description = obj.getDescription();
 
                         llProducts.addView(prolayout, 580, LinearLayout.LayoutParams.WRAP_CONTENT);
-                        prolayout.addView(linLayout1,580,35);
+                        prolayout.addView(linLayout1,580,50);
                         if (!description.isEmpty())
-                            prolayout.addView(linLayout2,580,35);
+                            prolayout.addView(linLayout2,580,50);
 
                         LinearLayout.LayoutParams layoutParams=(LinearLayout.LayoutParams) prolayout.getLayoutParams();
                         layoutParams.setMargins(0,0,0,60);
@@ -154,19 +154,19 @@ public class addSales extends AppCompatActivity {
                         if (!description.isEmpty())
                             descript.setText(obj.getDescription());
 
-                        linLayout1.addView(lblnm,250,35 );
-                        linLayout1.addView(name,320,35);
+                        linLayout1.addView(lblnm,250,50 );
+                        linLayout1.addView(name,320,50);
                         
 
                         if (!description.isEmpty())
                         {
-                            linLayout2.addView(lbldescript,250,35);
-                            linLayout2.addView(descript,320,35);
+                            linLayout2.addView(lbldescript,250,50);
+                            linLayout2.addView(descript,320,50);
                         }
 
                         LinearLayout linLayout3=new LinearLayout(prolayout.getContext());
                         linLayout3.setGravity(Gravity.CENTER);
-                        prolayout.addView(linLayout3,580,35);
+                        prolayout.addView(linLayout3,580,50);
 
                         lblqty= new TextView(llProducts.getContext());
                         lblqty.setId(procount*17);
@@ -174,7 +174,7 @@ public class addSales extends AppCompatActivity {
                         lblqty.setTextColor(Color.BLACK);
                         lblqty.setText(" Quantity : 0ml");
 
-                        linLayout3.addView(lblqty,240,35);
+                        linLayout3.addView(lblqty,240,50);
 
                         final SeekBar sbqty=new SeekBar(prolayout.getContext());
                         sbqty.setId(13*procount);
@@ -202,7 +202,7 @@ public class addSales extends AppCompatActivity {
                             }
                         });
 
-                        linLayout3.addView(sbqty,330,35);
+                        linLayout3.addView(sbqty,330,50);
                     }
                 }
             }

@@ -53,16 +53,16 @@
         />
 
     <LinearLayout
-        android:layout_marginTop="15sp"
         android:id="@+id/productsll"
         android:layout_width="300sp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="15sp"
+        android:background="@drawable/button_border"
         android:gravity="center_horizontal"
         android:orientation="vertical"
-        android:background="@drawable/button_border"
+        android:overScrollMode="ifContentScrolls"
         android:paddingTop="30sp"
-        android:paddingBottom="20sp"
-        >
+        android:paddingBottom="20sp">
 
     </LinearLayout>
 

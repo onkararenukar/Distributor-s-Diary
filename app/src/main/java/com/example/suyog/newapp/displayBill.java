@@ -82,7 +82,7 @@ public class displayBill extends AppCompatActivity
                         LinearLayout ll=new LinearLayout(billLayout.getContext());
                         ll.setGravity(Gravity.CENTER);
                         ll.setOrientation(LinearLayout.HORIZONTAL);
-                        billLayout.addView(ll,DpToPx(320),LinearLayout.LayoutParams.WRAP_CONTENT);
+                        billLayout.addView(ll,DpToPx(330),LinearLayout.LayoutParams.WRAP_CONTENT);
 
                         TextView tv1,tv2,tv3;
 
@@ -103,9 +103,9 @@ public class displayBill extends AppCompatActivity
                         tv2.setBackgroundResource(R.drawable.button_border_thin);
                         tv3.setBackgroundResource(R.drawable.button_border_thin);
 
-                        ll.addView(tv1,DpToPx(65),LinearLayout.LayoutParams.MATCH_PARENT);
-                        ll.addView(tv2,DpToPx(163),LinearLayout.LayoutParams.WRAP_CONTENT);
-                        ll.addView(tv3,DpToPx(87),LinearLayout.LayoutParams.MATCH_PARENT);
+                        ll.addView(tv1,DpToPx(67),LinearLayout.LayoutParams.MATCH_PARENT);
+                        ll.addView(tv2,DpToPx(172),LinearLayout.LayoutParams.WRAP_CONTENT);
+                        ll.addView(tv3,DpToPx(91),LinearLayout.LayoutParams.MATCH_PARENT);
 
                         if(rec.getValue().equals("0"))
                         {
