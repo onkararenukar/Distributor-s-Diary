@@ -124,7 +124,7 @@ public class view_requests extends AppCompatActivity {
                     linLayout.setOrientation(LinearLayout.VERTICAL);
 
                     LinearLayout.LayoutParams layoutParams=(LinearLayout.LayoutParams) linLayout.getLayoutParams();
-                    layoutParams.setMargins(0,0,0,35);
+                    layoutParams.setMargins(0,0,0,50);
 
                     LinearLayout ll1,ll2,ll3;
                     ll1 = new LinearLayout(getApplicationContext());
@@ -176,14 +176,14 @@ public class view_requests extends AppCompatActivity {
                     if(!temp.isEmpty())
                         Qty.setText(""+(Float.parseFloat(temp)*1000)+" ml ("+temp+" Ltrs)");
 
-                    ll1.addView(lblPname,200,35);
-                    ll1.addView(Pname,380,35);
+                    ll1.addView(lblPname,200,50);
+                    ll1.addView(Pname,380,50);
 
-                    ll2.addView(lblCname,200,35);
-                    ll2.addView(Cname,380,35);
+                    ll2.addView(lblCname,200,50);
+                    ll2.addView(Cname,380,50);
 
-                    ll3.addView(lblQty,200,35);
-                    ll3.addView(Qty,380,35);
+                    ll3.addView(lblQty,200,50);
+                    ll3.addView(Qty,380,50);
 
                     String pid;
 
