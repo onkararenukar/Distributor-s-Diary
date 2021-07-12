@@ -14,7 +14,11 @@ public class cust_homepage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cust_homepage);
     }
-
+    @Override
+    public void onBackPressed()
+    {
+        this.finishAffinity();
+    }
     public void action_LogOut(View view) {
         SaveSharedPreference.clearUserName(getApplicationContext());
         startActivity(new Intent(getApplicationContext(),login.class));

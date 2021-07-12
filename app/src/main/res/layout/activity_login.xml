@@ -106,7 +106,7 @@
             android:clickable="true"
             android:focusable="true"
             android:onClick="to_regist_page"
-            android:text="Sign In !"
+            android:text="Sign up !"
             android:textColor="#3F48CC"
             android:textSize="14dp"
 

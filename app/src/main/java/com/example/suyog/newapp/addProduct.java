@@ -27,8 +27,10 @@ public class addProduct extends AppCompatActivity {
         setContentView(R.layout.activity_add_product);
 
         distId= getIntent().getStringExtra("id");
-
-        dbRefProduct= FirebaseDatabase.getInstance().getReference("product");
+        if(distId==null) {
+            distId = SaveSharedPreference.getUserName(getApplicationContext());
+        }
+dbRefProduct= FirebaseDatabase.getInstance().getReference("product");
 
         etDelCharges= findViewById(R.id.delCharges);
         etCompName=findViewById(R.id.companyName);
@@ -53,7 +55,7 @@ public class addProduct extends AppCompatActivity {
         }
 
 
-        startActivity(new Intent(getApplicationContext(), Registration.class));
+        startActivity(new Intent(getApplicationContext(), dist_homepage.class));
         finish();
     }
 
@@ -86,7 +88,7 @@ public class addProduct extends AppCompatActivity {
         }
 
         Product product=new Product(name,compName,price,description);
-
+System.out.println("!!!!!!!!!!!DIST!!!!!ADD PRODUCT"+distId);
         String id=dbRefProduct.child(distId).push().getKey();
 
         myref=dbRefProduct.child(distId);
