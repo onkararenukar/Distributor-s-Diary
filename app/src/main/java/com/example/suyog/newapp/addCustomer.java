@@ -34,7 +34,7 @@ public class addCustomer extends AppCompatActivity
     int procount=0,deleted=0;
     ProgressDialog dialog;
     LinearLayout llProducts;
-    TextView lblqty;
+    TextView lblqty,lblSeekbar;
     String proId[]=new String[10],custId;
     DataSnapshot snap1,snap2,snap3;
     @Override
@@ -145,6 +145,9 @@ public class addCustomer extends AppCompatActivity
                         lblqty.setText(" Quantity : 0ml");
 
                         linLayout5.addView(lblqty,230,50);
+                        LinearLayout linLayout6=new LinearLayout(prolayout.getContext());
+                        linLayout6.setGravity(Gravity.CENTER);
+                        prolayout.addView(linLayout6,580,50);
 
                         final SeekBar sbqty=new SeekBar(prolayout.getContext());
                         sbqty.setId(13*procount);
@@ -155,8 +158,13 @@ public class addCustomer extends AppCompatActivity
                             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
                                 int myid=seekBar.getId();
                                 myid/=13;
-                                TextView lblqty= (TextView) findViewById(myid*17);
-                                lblqty.setText(" Quantity : "+(500*seekBar.getProgress())+"ml");
+                                linLayout6.removeAllViews();
+                                lblSeekbar=new TextView(llProducts.getContext());
+                                lblSeekbar.setId(myid*17);
+                                lblSeekbar.setGravity(Gravity.RIGHT);
+                                lblSeekbar.setTextColor(Color.RED);
+                                lblSeekbar.setText((500*seekBar.getProgress())+"ml");
+                                linLayout6.addView(lblSeekbar,240,50);
                             }
 
                             @Override
@@ -276,79 +284,85 @@ public class addCustomer extends AppCompatActivity
         custId=dbRefCust.push().getKey();
         Random random=new Random();
         int rnd = random.nextInt(100000)+99999;
-        final String passwd = String.valueOf(rnd);
+        String passwd = String.valueOf(rnd);
         Customer cust= new Customer(custId,name,addr,pincode,email,contact,passwd);
         dbRefCust.child(custId).setValue(cust);
+        passwd="Successfully registered Password for "+name+":::"+passwd+"";
+        Toast.makeText(getApplicationContext(),passwd,Toast.LENGTH_LONG).show();
 
-        for(int tlv=1;tlv<=procount;tlv++)
-        {
-            SeekBar skb=findViewById(13*tlv);
-            if(skb.getProgress()>0)
-            {
+        Intent intent=new Intent(getBaseContext(),dist_homepage.class);
+//        intent.putExtra("id",custId);
+        startActivity(intent);
+        finish();
+//        for(int tlv=1;tlv<=procount;tlv++)
+//        {
+//            SeekBar skb=findViewById(13*tlv);
+//            if(skb.getProgress()>0)
+//            {
+//
+//                final String proid=proId[tlv];
+//                DatabaseReference dbRefDefPro= FirebaseDatabase.getInstance().getReference("Customer").child(distId).child(custId).child("defaults");
+//
+//                final Double qty=(float)(skb.getProgress()*500.000)/1000.00;
+//                dbRefDefPro.child(proid).setValue(qty);
+//
+//                DatabaseReference dbRefProduct=FirebaseDatabase.getInstance().getReference("product").child(distId);
+//
+//                dbRefProduct.addValueEventListener(new ValueEventListener()
+//                {
+//                    @Override
+//                    public void onDataChange(DataSnapshot dataSnapshot)
+//                    {
+//                        cost=0;
+//                        cost+=(qty*Float.parseFloat(dataSnapshot.child("delCharges").getValue().toString()));
+//
+//                        Toast.makeText(getApplicationContext(),"Cost 1"+cost,Toast.LENGTH_SHORT);
+//
+//                        cost+=(qty*Float.parseFloat(dataSnapshot.child(proid).child("price").getValue().toString()));
+//
+//                        addValue(cost);
+//                    }
+//
+//                    @Override
+//                    public void onCancelled(DatabaseError databaseError)
+//                    {
+//
+//                    }
+//                });
+//
+//            }
+//        }
 
-                final String proid=proId[tlv];
-                DatabaseReference dbRefDefPro= FirebaseDatabase.getInstance().getReference("Customer").child(distId).child(custId).child("defaults");
 
-                final Double qty=(float)(skb.getProgress()*500.000)/1000.00;
-                dbRefDefPro.child(proid).setValue(qty);
-
-                DatabaseReference dbRefProduct=FirebaseDatabase.getInstance().getReference("product").child(distId);
-
-                dbRefProduct.addValueEventListener(new ValueEventListener()
-                {
-                    @Override
-                    public void onDataChange(DataSnapshot dataSnapshot)
-                    {
-                        cost=0;
-                        cost+=(qty*Float.parseFloat(dataSnapshot.child("delCharges").getValue().toString()));
-
-                        Toast.makeText(getApplicationContext(),"Cost 1"+cost,Toast.LENGTH_SHORT);
-
-                        cost+=(qty*Float.parseFloat(dataSnapshot.child(proid).child("price").getValue().toString()));
-
-                        addValue(cost);
-                    }
-
-                    @Override
-                    public void onCancelled(DatabaseError databaseError)
-                    {
-
-                    }
-                });
-
-            }
-        }
-
-
-        FirebaseDatabase.getInstance().getReference("Customer").child(distId).child(custId).child("fkDistId").setValue(distId);
-        //check(email,contact);
-        dialog.setTitle("Sending Email");
-        dialog.setMessage("Please wait");
-        dialog.show();
-        Thread sender = new Thread(new Runnable() {
-            @Override
-            public void run()
-            {
-                try
-                {
-                    GMailSender sender = new GMailSender("milkdistributor1@gmail.com", "milk123!");
-                    sender.sendMail("Password for your Login",
-                            "Hello, Your registration to app Distributor's diary is" +
-                                    " completed by your distributor, You can now log In to application using " +
-                                    " this email id and password : "+passwd+"\n Don't know about this activity, please write back to milkdistributor1@gmail.com",
-                            "milkdistributor1@gmail.com", etemail.getText().toString());
-                    dialog.dismiss();
-                    finish();
-                    startActivity(new Intent(getApplicationContext(),addCustomer.class));
-
-                }
-                catch (Exception e)
-                {
-                    Log.e("mylog1", "Error: " + e.getMessage());
-                }
-            }
-        });
-        sender.start();
+//        FirebaseDatabase.getInstance().getReference("Customer").child(distId).child(custId).child("fkDistId").setValue(distId);
+//        //check(email,contact);
+//        dialog.setTitle("Sending Email");
+//        dialog.setMessage("Please wait");
+//        dialog.show();
+//        Thread sender = new Thread(new Runnable() {
+//            @Override
+//            public void run()
+//            {
+//                try
+//                {
+//                    GMailSender sender = new GMailSender("milkdistributor1@gmail.com", "milk123!");
+//                    sender.sendMail("Password for your Login",
+//                            "Hello, Your registration to app Distributor's diary is" +
+//                                    " completed by your distributor, You can now log In to application using " +
+//                                    " this email id and password : "+passwd+"\n Don't know about this activity, please write back to milkdistributor1@gmail.com",
+//                            "milkdistributor1@gmail.com", etemail.getText().toString());
+//                    dialog.dismiss();
+//                    finish();
+//                    startActivity(new Intent(getApplicationContext(),addCustomer.class));
+//
+//                }
+//                catch (Exception e)
+//                {
+//                    Log.e("mylog1", "Error: " + e.getMessage());
+//                }
+//            }
+//        });
+//        sender.start();
     }
 
     /*private void check(final String email,final String contact)
