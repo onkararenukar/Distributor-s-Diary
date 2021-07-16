@@ -289,11 +289,16 @@ public class addCustomer extends AppCompatActivity
         dbRefCust.child(custId).setValue(cust);
         passwd="Successfully registered Password for "+name+":::"+passwd+"";
         Toast.makeText(getApplicationContext(),passwd,Toast.LENGTH_LONG).show();
+        etname.setText("");
+                etaddr.setText("");
+                etpincode.setText("");
+                etemail.setText("");
+                etcontact.setText("");
 
-        Intent intent=new Intent(getBaseContext(),dist_homepage.class);
-//        intent.putExtra("id",custId);
-        startActivity(intent);
-        finish();
+        Toast.makeText(getApplicationContext(),"Click back button to go to Distributers Home page",Toast.LENGTH_LONG).show();
+//
+//        finish();
+//        startActivity(new Intent(getApplicationContext(),dist_homepage.class));
 //        for(int tlv=1;tlv<=procount;tlv++)
 //        {
 //            SeekBar skb=findViewById(13*tlv);
@@ -451,7 +456,12 @@ public class addCustomer extends AppCompatActivity
         });
 
     }*/
-
+    @Override
+    public void onBackPressed()
+    {
+        finish();
+        startActivity(new Intent(getApplicationContext(),dist_homepage.class));
+    }
     private void addValue(float c)
     {
         total+=c;
